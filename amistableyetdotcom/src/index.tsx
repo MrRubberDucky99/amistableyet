@@ -1,4 +1,6 @@
 // Created By Judah Fuller Monday the 6th of June 2022
+// Website Index
+// V0.0.1
 // Default React Libraries
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -11,9 +13,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box } from "@mui/material";
 
-// Pages
-import App from "./App";
+// Interface/Classes
 import { pages } from "./Interface";
+
+// Default React Page
+import App from "./App";
 
 // Modify MUI button settings
 declare module "@mui/material/Button" {
