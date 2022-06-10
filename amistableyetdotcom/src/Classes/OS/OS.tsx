@@ -1,7 +1,6 @@
 // Created By Judah Fuller Monday the 6th of June 2022
 // Parent class for all OSes
 // Default React Libraries
-import React from "react";
 import version from "../versionClass";
 
 export class OS {
