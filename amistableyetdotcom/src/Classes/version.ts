@@ -2,7 +2,7 @@
 // Class to keep track of and parse OS/App versions
 import { parseVersion } from "../Functions/Parse";
 
-export default class version {
+export class version {
 	// Attributes
 	private major: number = 0;
 	private minor: number = 0;
