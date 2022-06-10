@@ -5,6 +5,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
 // React Router Libraries
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -19,18 +20,19 @@ import { pages } from "./Interface";
 // Theme
 import { theme } from "./theme";
 
+import { ResponsiveAppBar } from "./Components/TopNav";
+import { Home } from "./Components/home";
+
 // Define avaliable pages
 const Pages: pages = {
-	labels: [],
-	pageNum: [],
-	element: [],
+	labels: ["Home"],
+	pageNum: [0],
+	element: [<Home />],
 };
 
-// Render The Site
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
 );
-
 root.render(
 	<React.StrictMode>
 		<ThemeProvider theme={theme}>
@@ -45,6 +47,7 @@ root.render(
 						color: "secondary.contrastText",
 					}}
 				>
+					<ResponsiveAppBar pageLabels={Pages.labels} currentPage={0} />
 					<Box
 						sx={{
 							backgroundColor: "secondary.dark",
