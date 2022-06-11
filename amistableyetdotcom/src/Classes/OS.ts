@@ -45,6 +45,10 @@ export class OS {
 	public getID(): number {
 		return this.ID;
 	}
+
+	public getName(): string {
+		return this.name;
+	}
 }
 
 export interface OSVersion {

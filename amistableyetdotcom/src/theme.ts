@@ -82,7 +82,7 @@ export const darkTheme = createTheme({
 		primary: {
 			// Primary Colours
 			main: "#000",
-			light: "#888",
+			light: "#444",
 			dark: "#000",
 			contrastText: "#fff",
 		},

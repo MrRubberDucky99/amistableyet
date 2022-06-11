@@ -9,6 +9,7 @@ import {
 	doc,
 	setDoc,
 } from "firebase/firestore";
+import { getStorage, connectStorageEmulator, ref } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -21,8 +22,11 @@ const firebaseConfig = {
 };
 
 // eslint-disable-next-line
-const app = initializeApp(firebaseConfig);
-const db = getFirestore();
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore();
+export const storage = getStorage();
+export const storageRef = ref(storage);
+connectStorageEmulator(storage, "localhost", 9199);
 
 export async function getLeaderboard(setLeaderboard: any) {
 	console.log("Getting Leaderboard");
