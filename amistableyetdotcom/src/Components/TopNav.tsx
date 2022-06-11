@@ -57,7 +57,7 @@ export const ResponsiveAppBar: FunctionComponent<navProps> = ({
 						component="div"
 						sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
 					>
-						Judah Fuller
+						amistableyet
 					</Typography>
 
 					<Box
@@ -110,7 +110,7 @@ export const ResponsiveAppBar: FunctionComponent<navProps> = ({
 						component="div"
 						sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
 					>
-						Judah Fuller
+						amistableyet
 					</Typography>
 					<Box
 						sx={{
@@ -135,16 +135,6 @@ export const ResponsiveAppBar: FunctionComponent<navProps> = ({
 								<Typography variant="h6">{page}</Typography>
 							</Button>
 						))}
-					</Box>
-					<Box sx={{}}>
-						<Button
-							key={newPageLabels[currentPage].toLowerCase()}
-							onClick={handleCloseNavMenu}
-							sx={{ my: 2, color: "white", display: "block" }}
-							disableRipple
-						>
-							<Typography variant="h5">{newPageLabels[currentPage]}</Typography>
-						</Button>
 					</Box>
 				</Toolbar>
 			</Container>

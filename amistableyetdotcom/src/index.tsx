@@ -18,7 +18,7 @@ import { Box } from "@mui/material";
 import { pages } from "./Interface";
 
 // Theme
-import { theme } from "./theme";
+import { theme, darkTheme } from "./theme";
 
 import { ResponsiveAppBar } from "./Components/TopNav";
 import { Home } from "./Components/home";
@@ -35,7 +35,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 	<React.StrictMode>
-		<ThemeProvider theme={theme}>
+		<ThemeProvider theme={darkTheme}>
 			<BrowserRouter>
 				<Box
 					sx={{

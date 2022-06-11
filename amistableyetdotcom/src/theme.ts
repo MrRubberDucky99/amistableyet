@@ -75,3 +75,72 @@ export const theme = createTheme({
 		},
 	},
 });
+
+export const darkTheme = createTheme({
+	palette: {
+		mode: "dark",
+		primary: {
+			// Primary Colours
+			main: "#000",
+			light: "#888",
+			dark: "#000",
+			contrastText: "#fff",
+		},
+		secondary: {
+			// Secondary Colours
+			main: "#999",
+			light: "#fff",
+			dark: "#333",
+			contrastText: "#fff",
+		},
+		info: {
+			// Info Colours
+			main: "#fff",
+		},
+	},
+	components: {
+		MuiButton: {
+			// Modify MUI button
+			variants: [
+				{
+					// Create dashed button variant
+					props: { variant: "dashed" },
+					style: {
+						textTransform: "none",
+						border: `2px dashed`,
+					},
+				},
+				{
+					props: { variant: "dashed", color: "secondary" },
+					style: {
+						border: `4px dashed`,
+					},
+				},
+			],
+		},
+	},
+	typography: {
+		// Change text settings
+		fontFamily: [
+			// Change Fonts
+			"Ubuntu Mono",
+			"Roboto Mono",
+			"Roboto",
+			"-apple-system",
+			"BlinkMacSystemFont",
+			'"Segoe UI"',
+			'"Helvetica Neue"',
+			"Arial",
+			"sans-serif",
+			'"Apple Color Emoji"',
+			'"Segoe UI Emoji"',
+			'"Segoe UI Symbol"',
+		].join(","),
+		h6: {
+			fontSize: "1.2rem",
+		},
+		body2: {
+			fontSize: "2rem",
+		},
+	},
+});
